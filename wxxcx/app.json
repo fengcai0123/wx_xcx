@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/profile/profile",
+    "pages/logs/logs"  
+  ],
+  "tabBar":{ 
+    "selectedColor": "#3cc51f",
+    "list":[
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+     {
+      "pagePath": "pages/category/category", 
+      "text": "分类"
+    },
+    {
+      "pagePath": "pages/cart/cart",
+      "text": "购物车"
+    },
+    {
+      "pagePath": "pages/profile/profile",
+      "text": "我的"
+    } 
+  ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"black"
+  }
+}

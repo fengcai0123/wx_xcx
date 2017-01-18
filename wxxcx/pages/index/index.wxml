@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<swiper indicator-dots="true"
+  autoplay="true" interval="{{interval}}" duration="200" interval="3000">
+  <block wx:for="{{carsoul}}">
+    <swiper-item>
+      <image src="{{item.photo.url}}" class="swiper-image"  mode="{{imageMode}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="index_middle">
+  <view  bindtap="bindCategory" class="index_middle_item">
+    <image class=" index_middle_item_image" src="{{partsImg}}" background-size="cover"></image>
+    <text class=" ">配件大全</text>
+  </view>
+  <view  bindtap="bindViewTap" class="index_middle_item">
+    <image class="index_middle_item_image " src="{{inventoryImg}}" background-size="cover"></image>
+    <text class=" ">我的库存</text>
+  </view>
+  <view  bindtap="bindViewTap" class="index_middle_item">
+    <image class=" index_middle_item_image" src="{{customerOrderImg}}" background-size="cover"></image>
+    <text class=" ">客户订单</text>
+  </view> 
+</view>
+
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+    <view class="usermotto"wx:key="carsoul" wx:for="{{carsoul}}" >
+       <text class="user-motto">{{item.title}}</text>
+    </view>
+
+    <view class="usermotto"wx:key="carsoul" wx:for="{{carsoul}}" >
+        <Image style="height:200px,width:300px" src="{{item.image}}"> </Image>    
+    </view>
+</view>
